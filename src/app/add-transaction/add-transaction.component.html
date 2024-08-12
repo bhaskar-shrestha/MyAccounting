@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+    <h2>Transaction entry</h2>
+  </div>
+</div>
+<app-transaction-row-input
+  (onValueChanged)="setData($event)"
+></app-transaction-row-input>
+<div class="row">
+  <div class="col-6 text-end">
+    <button type="reset" class="btn btn-warning" (click)="cancelled()">
+      Cancel
+    </button>
+  </div>
+  <div class="col-6">
+    <button class="btn btn-primary" (click)="saved()">Save</button>
+  </div>
+</div>

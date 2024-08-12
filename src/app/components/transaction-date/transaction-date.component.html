@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-12">
+    <label class="form-label">Transaction date</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="calendar-addon">$</span>
+      <input
+        type="text"
+        class="form-control"
+        ngbDatepicker
+        #d="ngbDatepicker"
+        [(ngModel)]="transactionDate"
+        (click)="d.toggle()"
+        (ngModelChange)="this.onDateSet()"
+      />
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="!isValidDate()">
+  <div class="col-12">
+    <figcaption class="blockquote-footer">date is not valid</figcaption>
+  </div>
+</div>
+<!--(ngModelChange)="onDateSet()"-->

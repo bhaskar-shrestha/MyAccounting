@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-2 col-xs-12">
+    <app-transaction-date
+      (onDateChange)="getDate($event)"
+    ></app-transaction-date>
+  </div>
+  <div class="col-md-6 col-xs-12">
+    <app-transaction-description
+      (onDescriptionChange)="getDescription($event)"
+    ></app-transaction-description>
+  </div>
+  <div class="col-md-2 col-xs-12">
+    <app-amount-field (onAmountChange)="getAmount($event)"></app-amount-field>
+  </div>
+  <div class="col-md-2 col-xs-12">
+    <app-transaction-type
+      (onTypeChanged)="getIsIncome($event)"
+    ></app-transaction-type>
+  </div>
+</div>
